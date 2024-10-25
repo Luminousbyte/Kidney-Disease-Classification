@@ -52,3 +52,106 @@ x======x]
 [2024-10-26 01:29:48,423: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
 
 x======x]
+[2024-10-26 02:05:06,544: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:05:06,555: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:05:06,557: INFO: common: created directory at: artifacts]
+[2024-10-26 02:05:06,561: INFO: common: created directory at: artifacts\training]
+[2024-10-26 02:08:11,661: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:08:11,665: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:08:11,667: INFO: common: created directory at: artifacts]
+[2024-10-26 02:08:11,670: INFO: common: created directory at: artifacts\training]
+[2024-10-26 02:11:11,890: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:11:11,903: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:11:11,905: INFO: common: created directory at: artifacts]
+[2024-10-26 02:11:11,907: INFO: common: created directory at: artifacts\training]
+[2024-10-26 02:13:36,709: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:13:36,714: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:13:36,716: INFO: common: created directory at: artifacts]
+[2024-10-26 02:13:36,718: INFO: common: created directory at: artifacts\training]
+[2024-10-26 02:43:50,406: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-10-26 02:43:50,409: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:43:50,411: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:43:50,412: INFO: common: created directory at: artifacts]
+[2024-10-26 02:43:50,412: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-26 02:43:50,412: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-26 02:44:22,823: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-26 02:44:23,976: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x======x]
+[2024-10-26 02:44:23,977: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-26 02:44:23,980: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:44:23,982: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:44:23,982: INFO: common: created directory at: artifacts]
+[2024-10-26 02:44:23,983: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-26 02:44:24,598: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-26 02:44:25,017: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x======x]
+[2024-10-26 02:44:25,018: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-26 02:44:25,021: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:44:25,024: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:44:25,025: INFO: common: created directory at: artifacts]
+[2024-10-26 02:44:25,026: ERROR: main: 'ConfigurationManager' object has no attribute 'get_training_config']
+Traceback (most recent call last):
+  File "d:/FULL Projects/Kidney-Disease-Classification/main.py", line 41, in <module>
+    obj.main()
+  File "d:\full projects\kidney-disease-classification\src\cnnClassifier\pipeline\stage_03_model_training.py", line 13, in main
+    training_config = config.get_training_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_training_config'
+[2024-10-26 02:46:24,189: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-10-26 02:46:24,192: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:46:24,194: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:46:24,195: INFO: common: created directory at: artifacts]
+[2024-10-26 02:46:24,195: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-26 02:46:24,196: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-26 02:46:56,391: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-26 02:46:57,535: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x======x]
+[2024-10-26 02:46:57,535: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-26 02:46:57,539: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:46:57,541: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:46:57,542: INFO: common: created directory at: artifacts]
+[2024-10-26 02:46:57,543: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-26 02:46:58,161: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-26 02:46:58,483: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x======x]
+[2024-10-26 02:46:58,484: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-26 02:46:58,488: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:46:58,490: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:46:58,491: INFO: common: created directory at: artifacts]
+[2024-10-26 02:46:58,491: ERROR: main: 'ConfigurationManager' object has no attribute 'get_training_config']
+Traceback (most recent call last):
+  File "d:/FULL Projects/Kidney-Disease-Classification/main.py", line 41, in <module>
+    obj.main()
+  File "d:\full projects\kidney-disease-classification\src\cnnClassifier\pipeline\stage_03_model_training.py", line 13, in main
+    training_config = config.get_training_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_training_config'
+[2024-10-26 02:51:23,391: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-10-26 02:51:23,394: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:51:23,396: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:51:23,396: INFO: common: created directory at: artifacts]
+[2024-10-26 02:51:23,397: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-26 02:51:23,397: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-26 02:51:55,868: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-26 02:51:56,861: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x======x]
+[2024-10-26 02:51:56,861: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-26 02:51:56,864: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:51:56,866: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:51:56,867: INFO: common: created directory at: artifacts]
+[2024-10-26 02:51:56,867: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-26 02:51:57,389: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-26 02:51:57,759: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x======x]
+[2024-10-26 02:51:57,760: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-26 02:51:57,763: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-26 02:51:57,765: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-26 02:51:57,766: INFO: common: created directory at: artifacts]
+[2024-10-26 02:51:57,767: INFO: common: created directory at: artifacts\training]
+[2024-10-26 02:54:32,245: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x======x]
