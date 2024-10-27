@@ -392,3 +392,150 @@ Traceback (most recent call last):
   File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
     from distutils._modified import newer
 ModuleNotFoundError: No module named 'distutils._modified'
+[2024-10-27 23:48:00,803: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-27 23:48:00,836: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-27 23:48:00,849: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-27 23:48:00,849: INFO: common: created directory at: artifacts]
+[2024-10-27 23:48:00,849: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-27 23:48:00,849: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-27 23:48:34,420: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-27 23:48:36,133: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-27 23:48:36,135: INFO: main: *******************]
+[2024-10-27 23:48:36,136: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-27 23:48:36,136: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-27 23:48:36,136: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-27 23:48:36,146: INFO: common: created directory at: artifacts]
+[2024-10-27 23:48:36,146: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-27 23:48:37,518: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-27 23:48:38,006: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-27 23:48:38,006: INFO: main: *******************]
+[2024-10-27 23:48:38,012: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-27 23:48:38,017: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-27 23:48:38,020: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-27 23:48:38,020: INFO: common: created directory at: artifacts]
+[2024-10-27 23:48:38,022: INFO: common: created directory at: artifacts\training]
+[2024-10-27 23:51:26,453: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-27 23:51:26,453: INFO: main: *******************]
+[2024-10-27 23:51:26,461: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-27 23:51:26,462: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-27 23:51:26,476: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-27 23:51:26,476: INFO: common: created directory at: artifacts]
+[2024-10-27 23:52:20,683: INFO: common: json file saved at: scores.json]
+[2024-10-27 23:52:20,683: INFO: common: json file saved at: scores.json]
+[2024-10-27 23:52:24,472: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-10-27 23:52:25,476: INFO: builder_impl: Assets written to: C:\Users\Pinaki\AppData\Local\Temp\tmp0sy5v6jj\model\data\model\assets]
+[2024-10-27 23:52:42,845: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "d:/FULL Projects/Kidney-Disease-Classification/main.py", line 56, in <module>
+    model_evalution.main()
+  File "d:\full projects\kidney-disease-classification\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 17, in main
+    evaluation.log_into_mlflow()
+  File "d:\full projects\kidney-disease-classification\src\cnnClassifier\components\model_evaluation_mlflow.py", line 73, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 155, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 197, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2024-10-28 00:03:38,987: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-28 00:03:38,987: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:03:38,987: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:03:38,987: INFO: common: created directory at: artifacts]
+[2024-10-28 00:03:38,987: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-28 00:03:38,987: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 00:04:12,146: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 00:04:13,818: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-28 00:04:13,818: INFO: main: *******************]
+[2024-10-28 00:04:13,818: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-28 00:04:13,835: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:04:13,840: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:04:13,842: INFO: common: created directory at: artifacts]
+[2024-10-28 00:04:13,842: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-28 00:04:14,708: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-28 00:04:15,117: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-28 00:04:15,133: INFO: main: *******************]
+[2024-10-28 00:04:15,133: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-28 00:04:15,133: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:04:15,150: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:04:15,151: INFO: common: created directory at: artifacts]
+[2024-10-28 00:04:15,151: INFO: common: created directory at: artifacts\training]
+[2024-10-28 00:07:05,495: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-28 00:07:05,495: INFO: main: *******************]
+[2024-10-28 00:07:05,495: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-28 00:07:05,495: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:07:05,513: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:07:05,517: INFO: common: created directory at: artifacts]
+[2024-10-28 00:08:04,843: INFO: common: json file saved at: scores.json]
+[2024-10-28 00:08:04,843: INFO: common: json file saved at: scores.json]
+[2024-10-28 00:08:07,794: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-10-28 00:08:08,821: INFO: builder_impl: Assets written to: C:\Users\Pinaki\AppData\Local\Temp\tmpcymn6yuz\model\data\model\assets]
+[2024-10-28 00:08:28,351: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-28 00:16:15,551: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-28 00:16:15,551: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:16:15,551: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:16:15,551: INFO: common: created directory at: artifacts]
+[2024-10-28 00:16:15,551: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-28 00:16:15,551: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 00:16:48,614: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 00:16:50,758: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-28 00:16:50,758: INFO: main: *******************]
+[2024-10-28 00:16:50,758: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-28 00:16:50,774: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:16:50,774: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:16:50,774: INFO: common: created directory at: artifacts]
+[2024-10-28 00:16:50,782: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-28 00:16:51,757: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-28 00:16:52,293: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-28 00:16:52,293: INFO: main: *******************]
+[2024-10-28 00:16:52,293: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-28 00:16:52,304: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:16:52,311: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:16:52,313: INFO: common: created directory at: artifacts]
+[2024-10-28 00:16:52,313: INFO: common: created directory at: artifacts\training]
+[2024-10-28 00:19:47,902: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-28 00:19:47,902: INFO: main: *******************]
+[2024-10-28 00:19:47,902: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-28 00:19:47,919: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 00:19:47,934: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 00:19:47,935: INFO: common: created directory at: artifacts]
+[2024-10-28 00:20:44,653: INFO: common: json file saved at: scores.json]
+[2024-10-28 00:20:44,653: INFO: common: json file saved at: scores.json]
+[2024-10-28 00:20:47,936: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-10-28 00:20:48,983: INFO: builder_impl: Assets written to: C:\Users\Pinaki\AppData\Local\Temp\tmp5qwz25bo\model\data\model\assets]
+[2024-10-28 00:21:07,679: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]

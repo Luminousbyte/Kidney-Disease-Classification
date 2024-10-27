@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/FULL%20Projects/Kidney-Disease-Classification/mlruns/0/c174b1a081a9499e8f5bcd753b993bc9/artifacts
+end_time: 1730055067679
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c174b1a081a9499e8f5bcd753b993bc9
+run_name: intrigued-dog-876
+run_uuid: c174b1a081a9499e8f5bcd753b993bc9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730055045185
+status: 3
+tags: []
+user_id: Pinaki
