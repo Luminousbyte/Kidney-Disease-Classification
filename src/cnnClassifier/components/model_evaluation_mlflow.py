@@ -5,6 +5,9 @@ import mlflow.keras
 from urllib.parse import urlparse
 from cnnClassifier.entity.config_entity import EvaluationConfig
 from cnnClassifier.utils.common import read_yaml, create_directories,save_json
+import dagshub
+import mlflow
+
 
 
 class Evaluation:
@@ -53,22 +56,32 @@ class Evaluation:
         save_json(path=Path("scores.json"), data=scores)
 
     
+
+
     def log_into_mlflow(self):
+        # Initialize DagsHub to enable logging with MLflow
+        dagshub.init(repo_owner='Luminousbyte', repo_name='Kidney-Disease-Classification', mlflow=True)
+
+        # Set MLflow registry URI
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-        
+
         with mlflow.start_run():
+            # Log parameters and metrics to MLflow
             mlflow.log_params(self.config.all_params)
-            mlflow.log_metrics(
-                {"loss": self.score[0], "accuracy": self.score[1]}
-            )
+            mlflow.log_metrics({
+                "loss": self.score[0], 
+                "accuracy": self.score[1]
+            })
+
+            # Additional sample parameter and metric logging
+            mlflow.log_param('parameter name', 'value')
+            mlflow.log_metric('metric name', 1)
+
             # Model registry does not work with file store
             if tracking_url_type_store != "file":
-
-                # Register the model
-                # There are other ways to use the Model Registry, which depends on the use case,
-                # please refer to the doc for more information:
-                # https://mlflow.org/docs/latest/model-registry.html#api-workflow
+                # Register the model in MLflow Model Registry
                 mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
             else:
+                # Log the model without registration if using a file store
                 mlflow.keras.log_model(self.model, "model")
