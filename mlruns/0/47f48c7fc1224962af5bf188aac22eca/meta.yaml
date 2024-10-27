@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/FULL%20Projects/Kidney-Disease-Classification/mlruns/0/47f48c7fc1224962af5bf188aac22eca/artifacts
+end_time: 1730011594431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 47f48c7fc1224962af5bf188aac22eca
+run_name: capable-crow-670
+run_uuid: 47f48c7fc1224962af5bf188aac22eca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730011580037
+status: 4
+tags: []
+user_id: Pinaki
