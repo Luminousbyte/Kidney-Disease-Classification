@@ -606,3 +606,49 @@ x==========x]
 [2024-10-28 01:24:55,192: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-10-28 01:31:15,393: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-28 01:31:15,393: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 01:31:15,409: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 01:31:15,409: INFO: common: created directory at: artifacts]
+[2024-10-28 01:31:15,409: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-28 01:31:15,409: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 01:31:48,562: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 01:31:49,525: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-28 01:31:49,526: INFO: main: *******************]
+[2024-10-28 01:31:49,526: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-28 01:31:49,529: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 01:31:49,531: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 01:31:49,532: INFO: common: created directory at: artifacts]
+[2024-10-28 01:31:49,533: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-28 01:31:50,081: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-28 01:31:50,366: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-28 01:31:50,366: INFO: main: *******************]
+[2024-10-28 01:31:50,366: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-28 01:31:50,382: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 01:31:50,382: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 01:31:50,382: INFO: common: created directory at: artifacts]
+[2024-10-28 01:31:50,388: INFO: common: created directory at: artifacts\training]
+[2024-10-28 01:38:13,877: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-28 01:38:13,878: INFO: main: *******************]
+[2024-10-28 01:38:13,879: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-28 01:38:13,884: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 01:38:13,887: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 01:38:13,889: INFO: common: created directory at: artifacts]
+[2024-10-28 01:39:10,470: INFO: common: json file saved at: scores.json]
+[2024-10-28 01:39:10,471: INFO: common: json file saved at: scores.json]
+[2024-10-28 01:39:11,397: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2024-10-28 01:39:11,405: INFO: helpers: Accessing as Luminousbyte]
+[2024-10-28 01:39:12,730: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/Luminousbyte/Kidney-Disease-Classification "HTTP/1.1 200 OK"]
+[2024-10-28 01:39:12,735: INFO: helpers: Initialized MLflow to track repo "Luminousbyte/Kidney-Disease-Classification"]
+[2024-10-28 01:39:12,737: INFO: helpers: Repository Luminousbyte/Kidney-Disease-Classification initialized!]
+[2024-10-28 01:39:17,554: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-10-28 01:39:18,477: INFO: builder_impl: Assets written to: C:\Users\Pinaki\AppData\Local\Temp\tmp8zpg11mb\model\data\model\assets]
+[2024-10-28 01:40:01,779: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
