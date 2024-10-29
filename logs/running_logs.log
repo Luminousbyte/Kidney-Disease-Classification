@@ -652,3 +652,106 @@ x==========x]
 [2024-10-28 01:40:01,779: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-10-28 02:19:45,081: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-10-28 02:19:45,085: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 02:19:45,088: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 02:19:45,088: INFO: common: created directory at: artifacts]
+[2024-10-28 02:19:45,089: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-28 02:19:45,090: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 02:20:18,327: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 02:20:20,859: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x======x]
+[2024-10-28 02:23:58,564: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-10-28 02:23:58,564: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 02:23:58,564: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 02:23:58,579: INFO: common: created directory at: artifacts]
+[2024-10-28 02:23:58,579: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-28 02:23:58,579: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 02:24:32,135: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 02:24:34,204: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x======x]
+[2024-10-28 02:25:05,405: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-10-28 02:25:05,405: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 02:25:05,414: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 02:25:05,414: INFO: common: created directory at: artifacts]
+[2024-10-28 02:25:05,414: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-28 02:25:05,414: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 02:25:38,679: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1Q0WzSl389ofCKy_AX0UjFnQwB73OW-xU/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-10-28 02:25:42,505: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x======x]
+[2024-10-28 02:26:18,581: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-28 02:26:18,585: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 02:26:18,600: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 02:26:18,603: INFO: common: created directory at: artifacts]
+[2024-10-28 02:26:18,611: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-28 02:26:19,805: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-28 02:26:20,761: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x======x]
+[2024-10-28 02:26:34,116: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-10-28 02:26:34,116: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 02:26:34,116: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 02:26:34,125: INFO: common: created directory at: artifacts]
+[2024-10-28 02:26:34,127: INFO: common: created directory at: artifacts\training]
+[2024-10-28 02:32:21,988: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x======x]
+[2024-10-28 02:32:39,831: INFO: stage_04_model_evaluation: *******************]
+[2024-10-28 02:32:39,831: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-28 02:32:39,831: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-28 02:32:39,837: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-28 02:32:39,837: INFO: common: created directory at: artifacts]
+[2024-10-28 02:33:52,238: INFO: common: json file saved at: scores.json]
+[2024-10-28 02:33:52,238: INFO: common: json file saved at: scores.json]
+[2024-10-28 02:33:53,458: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2024-10-28 02:33:53,487: INFO: helpers: Accessing as Luminousbyte]
+[2024-10-28 02:33:54,718: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/Luminousbyte/Kidney-Disease-Classification "HTTP/1.1 200 OK"]
+[2024-10-28 02:33:54,732: INFO: helpers: Initialized MLflow to track repo "Luminousbyte/Kidney-Disease-Classification"]
+[2024-10-28 02:33:54,739: INFO: helpers: Repository Luminousbyte/Kidney-Disease-Classification initialized!]
+[2024-10-28 02:34:02,660: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-10-28 02:34:04,408: INFO: builder_impl: Assets written to: C:\Users\Pinaki\AppData\Local\Temp\tmpqb9w_zha\model\data\model\assets]
+[2024-10-28 02:34:48,024: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-29 12:29:31,116: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.29.105:8080]
+[2024-10-29 12:29:31,117: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 12:30:09,032: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 12:30:09] "GET / HTTP/1.1" 200 -]
+[2024-10-29 12:30:20,864: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "d:/FULL Projects/Kidney-Disease-Classification/app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "d:\full projects\kidney-disease-classification\src\cnnClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Pinaki\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-10-29 12:30:20,874: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 12:30:20] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 12:39:07,925: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.29.105:8080]
+[2024-10-29 12:39:07,926: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 12:39:13,592: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 12:39:13] "GET / HTTP/1.1" 200 -]
+[2024-10-29 12:39:20,937: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 12:39:20] "POST /predict HTTP/1.1" 200 -]
